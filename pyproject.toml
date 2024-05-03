@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "webtext"
+version = "0.1.0"
+description = "Uniform web text processing"
+authors = ["Hannes Moser <box@hannesmoser.at>"]
+repository  = "https://github.com/eliias/webtext"
+license = "MIT"
+readme = "README.md"
+keywords = ["nlp", "llm", "text processing"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed"
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.2"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
